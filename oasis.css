@@ -174,23 +174,14 @@ section {
     margin-bottom: 1.5rem; }
 
 .section--hero {
-  max-width: 760px;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  /* remove the 760px clamp */
+  margin: 0;
+  padding: 0;
   position: relative;
-  margin-top: 4rem; }
-  .section--hero .cta {
-    margin-top: 1rem; }
-    .section--hero .cta small {
-      vertical-align: top; }
-    .section--hero .cta:hover {
-      transform: translate3d(0px, -3px, 0px); }
-  .section--hero .flex_child--horizontal:first-of-type {
-    flex: 1.2;
-    flex-direction: column;
-    padding-right: 4rem;
-    padding-bottom: 5.5rem; }
-  .section--hero .flex_child--horizontal:last-of-type {
-    flex: 1;
-    z-index: -1; }
+}
 
 .section--summary {
   margin-top: -4rem;
@@ -711,5 +702,29 @@ section {
   .form-group {
     max-width: none;
     width: auto; } }
+
+#section-hero,
+.section--hero {
+  width: 100vw;
+  height: 1000px !important;
+  /* force fixed height */
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+
+  #section-hero,
+  .section--hero {
+    height: 400px !important;
+    /* force shorter on phones */
+    max-height: 400px !important;
+  }
+}
 
 /*# sourceMappingURL=oasis.css.map */
