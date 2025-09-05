@@ -183,6 +183,16 @@ section {
   position: relative;
 }
 
+.section--about {
+  margin-top: 4rem;
+  /* pushes it down below the hero */
+}
+
+.section--features {
+  margin-top: 4rem;
+  /* pushes it down below the hero */
+}
+
 .section--summary {
   margin-top: -4rem;
   background-color: white;
