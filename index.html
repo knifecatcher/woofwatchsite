@@ -4,20 +4,14 @@ css: oasis
 nav:
   - name: home
     link: '#section-hero'
-  - name: snippets
-    link: '#section-snippets'
+  - name: about
+    link: '#section-about'
   - name: features
     link: '#section-features'
-  - name: stats
-    link: '#section-stats'
-  - name: integration
-    link: '#section-integrations'
-  - name: customers
-    link: '#section-customers'
-  - name: contact
-    link: '#section-contact'
+  - name: media
+    link: '#section-media'
 section-hero:
-  title: Oasis
+  title: WoofWatch
   description: Error tracking and monitor all your server status at all time. Prevent incidents and be efficient.
   image: "images/hero-phone.png"
 section-summary:
@@ -90,34 +84,6 @@ section-stats:
     - id: stats-5
       name: Average Latency
       number: 1.98ms
-section-integrations:
-  title: Trusted by
-  logos:
-    - img: images/logos/1.svg
-      name: airbnb
-    - img: images/logos/2.svg
-      name: twitter
-    - img: images/logos/3.svg
-      name: eventbrite
-    - img: images/logos/4.svg
-      name: netflix
-    - img: images/logos/5.svg
-      name: google
-    - img: images/logos/6.svg
-      name: spotify
-section-customers:
-  title: What customers are saying
-  slides:
-    - title: Oasis provides a robust synopsis of our service statuses
-      paragraph: Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. 
-      image: images/customer-1.png
-    - title: Oasis has brought clarity to our architecture
-      paragraph: Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
-      image: images/customer-2.png
-section-contact:
-  title: Ready to get started?
-  description: Sign up here and our representative will contact you shortly.
-  btn-text: Sign Up
 ---
 <nav class="nav--desktop">
   {% for item in page.nav %}
@@ -231,35 +197,5 @@ section-contact:
     {% for logo in page.section-integrations.logos %}
       <img src="{{ logo.img }}" alt="{{ logo.name }}" class="logo">
     {% endfor %}
-  </div>
-</section>
-<section class="section--customers js-section">
-  <div class="section__container">
-    <h4 class="title">{{ page.section-customers.title }}</h4>
-    <div class="slide__container">
-      {% for slide in page.section-customers.slides %}
-        <div>
-          <div class="flex--horizontal slide">
-            <div class="slide__content">
-              <h4 class="font-fjalla slide-{{forloop.index}}">{{ slide.title }}</h4>
-              <p class="slide-{{forloop.index}}">{{ slide.paragraph }}</p>
-            </div>
-            <div class="slide__image slide-{{forloop.index}}">
-              <img src="{{ slide.image }}" alt="slide image" >
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-<section class="section--contact js-section">
-  <div class="section__title">
-    <h3 class="font-fjalla">{{ page.section-contact.title }}</h3>
-    <p>{{ page.section-contact.description }}</p>
-    <div class="form-group">
-      <input type="text" class="input" placeholder="Your Email">
-      <button class="input-button">Sign Up</button>
-    </div>
   </div>
 </section>
