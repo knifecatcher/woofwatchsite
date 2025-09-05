@@ -10,6 +10,7 @@ nav:
     link: '#section-features'
   - name: media
     link: '#section-media'
+    
 section-hero:
   title: WoofWatch
   description: Dogs in mech suits guarding the galaxy.
@@ -24,54 +25,22 @@ section-about:
     Now, in sun-soaked <b>Pastel City</b>, a rogue AI called <b>S.A.M.</b> has broken free. As the last activated agent of
     <b>WoofWatch</b>, you’re a rookie pup in a mech suit - ready to guard humanity and prove that hope still has teeth.
 
-section-summary:
-  title: Reliable Monitoring System
-  list:
-    - img: "images/summary-github.png"
-      text: works on phone and all devices
-    - img: "images/summary-cpu.png"
-      text: free status page for monitoring
-    - img: "images/summary-dollar.png"
-      text: easy integrations and setup
-  text: >-
-    For some systems, latency and throughput are coupled entities. In TCP/IP, latency can also directly affect throughput. In TCP connections, the large bandwidth-delay product of high latency connections, combined with relatively small TCP window sizes on many devices, effectively causes the throughput of a high latency connection to drop sharply with latency.
-    <br><br>
-    This can be remedied with various techniques, such as increasing the TCP congestion window size, or more drastic solutions, such as packet coalescing, TCP acceleration, and forward error correction, all of which are commonly used for high latency satellite links.
-section-snippets:
-  title: Easy tracking of all Your stats
-  cards:
-    - text: Health check on the latest selected time range
-      stats: OK
-    - text: The average ping up time of selected time range
-      stats: 95%
-    - text: Average latency in the selected time range
-      stats: 19ms
-    - text: Shows the average packet lost in selected time range
-      stats: 0.1
-    - text: Error rate of bit transmission in selected time range
-      stats: 0.02%
-  description: >-
-    Throughput is controlled by available bandwidth, as well as the available signal-to-noise ratio and hardware limitations. Throughput for the purpose of this article will be understood to be measured from the arrival of the first bit of data at the receiver, to decouple the concept of throughput from the concept of latency.
-    <br><br>
-    Choice of an appropriate time window will often dominate calculations of throughput.
 section-features:
-  title: Features of Oasis
-  description: TCP acceleration converts the TCP packets into a stream that is similar to UDP. Because of this, the TCP acceleration software must provide its own mechanisms to ensure the reliability of the link.
-  image: "images/features-image.png"
-  features-left:
-    - img: "images/features-circle.svg"
-      text: Performance issues such as throughput and end-to-end delay are also addressed.
-    - img: "images/features-polygon.svg"
-      text: Many systems can be characterized as dominated either by throughput limitations or by latency limitations in terms of end-user utility or experience. 
-    - img: "images/features-rec.svg"
-      text: In some cases, hard limits such as the speed of light present unique problems to such systems and nothing can be done to correct this.
-  features-right:
-    - img: "images/features-star.svg"
-      text: Other systems allow for significant balancing and optimization for best user experience.
-    - img: "images/features-triangle.svg"
-      text: A telecom satellite in geosynchronous orbit imposes a path length of at least 71000 km between transmitter and receiver.
-    - img: "images/features-rec.svg"
-      text: This delay can be very noticeable and affects satellite phone service regardless of available throughput capacity.
+  title: Features
+  items:
+    - img: "images/customer-1.png"
+      text: "Play seamless four-player co-op"
+    - img: "images/customer-1.png"
+      text: "Unlock over 100 items to keep each run fresh"
+    - img: "images/customer-1.png"
+      text: "Theorycraft endless mech and weapon combos"
+    - img: "images/customer-1.png"
+      text: "Discover lore through memory cores"
+    - img: "images/customer-1.png"
+      text: "Challenge bosses inspired by dogs' greatest fears"
+    - img: "images/customer-1.png"
+      text: "Explore handcrafted, ever-changing levels"
+
 section-stats:
   title: Stats on Oasis
   description: These long path length considerations are exacerbated when communicating with space probes and other long-range targets beyond Earth's atmosphere.
@@ -129,47 +98,22 @@ section-stats:
   </div>
 </section>
 
-<section class="section--snippets scroll-to-reveal js-section">
-  <div class="flex--horizontal">
-    <div class="snippets__cards flex--vertical">
-      {% for card in page.section-snippets.cards %}
-        <div class="snippets__card flex--horizontal">
-          <p>{{ card.text }}</p>
-          <h3 class="font-fjalla">{{ card.stats }}</h3>
-        </div>
-      {% endfor %}
-    </div>
-    <div class="snippets__content animated fadeInDown">
-      <h3 class="font-fjalla snippets__title">{{ page.section-snippets.title }}</h3>
-      <p class="snippets__description">{{ page.section-snippets.description }}</p>
-    </div>
-  </div>
-</section>
-<section class="section--features scroll-to-reveal js-section">
+<section id="section-features" class="section--features scroll-to-reveal js-section">
   <div class="section__title">
     <h3 class="font-fjalla">{{ page.section-features.title }}</h3>
     <p>{{ page.section-features.description }}</p>
   </div>
-  <div class="flex--horizontal">
-    <div class="features__left aligner flex--vertical">
-      {% for feature in page.section-features.features-left %}
-        <div class="flex--vertical fadeInLeft fadeInLeft--{{ forloop.index0 }}">
-          <object type="image/svg+xml" data="{{ feature.img }}"></object>
-          <p>{{ feature.text }}</p>
-        </div>
-      {% endfor %}
+
+  <div class="features__grid">
+    {% for feature in page.section-features.items %}
+    <div class="feature__card">
+      <img src="{{ feature.img }}" alt="">
+      <p>{{ feature.text }}</p>
     </div>
-    <img class="features__image" src="{{ page.section-features.image }}" alt="">
-    <div class="features__right aligner flex--vertical">
-      {% for feature in page.section-features.features-right %}
-        <div class="flex--vertical fadeInRight fadeInRight--{{ forloop.index0 }}">
-          <object type="image/svg+xml" data="{{ feature.img }}"></object>
-          <p>{{ feature.text }}</p>
-        </div>
-      {% endfor %}
-    </div>
+    {% endfor %}
   </div>
 </section>
+
 <section class="section--stats scroll-to-reveal js-section">
   <div class="section__title">
     <h3 class="font-fjalla">{{ page.section-stats.title }}</h3>

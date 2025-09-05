@@ -748,4 +748,25 @@ section {
   margin-bottom: 3rem;
 }
 
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  /* centers if fewer than 3 in last row */
+  margin-top: 3rem;
+}
+
+.feature__card {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature__card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=oasis.css.map */
