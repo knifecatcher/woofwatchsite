@@ -741,4 +741,11 @@ section {
   }
 }
 
+/* subtle dividers between content sections */
+.js-section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
 /*# sourceMappingURL=oasis.css.map */
