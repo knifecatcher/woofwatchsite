@@ -172,6 +172,10 @@ section {
   text-align: center; }
   .section__title h3 {
     margin-bottom: 1.5rem; }
+  .section__title h2 {
+    margin-bottom: 1.5rem;
+    /* adds spacing between header and body */
+  }
 
 .section--hero {
   width: 100vw;
@@ -184,6 +188,11 @@ section {
 }
 
 .section--about {
+  margin-top: 4rem;
+  /* pushes it down below the hero */
+}
+
+.section--features {
   margin-top: 4rem;
   /* pushes it down below the hero */
 }
