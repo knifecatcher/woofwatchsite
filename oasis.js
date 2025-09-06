@@ -28,12 +28,6 @@ for (var i = 0; i < scrollToRevealArray.length; i++) {
   });
 }
 
-// Nav highlight helper
-function setActiveLink(event, buttons) {
-  buttons.forEach(btn => btn.classList.remove("selected"));
-  event.target.classList.add("selected");
-}
-
 // Attach smooth scroll by href
 function attachSmoothScroll(buttons) {
   buttons.forEach(btn => {
@@ -49,8 +43,6 @@ function attachSmoothScroll(buttons) {
           target.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
-
-      setActiveLink(e, buttons);
 
       // Close mobile menu if open
       if (mobileList.classList.contains("show")) {

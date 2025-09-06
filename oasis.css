@@ -85,8 +85,6 @@ nav {
         left: 0;
         right: 0;
         opacity: 1; }
-    nav a.selected {
-      color: #c0b2fc; }
   nav.fixed {
     position: fixed;
     top: 0;
