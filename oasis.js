@@ -69,10 +69,3 @@ if (ctaBtn) {
     offset: -80
   });
 }
-
-// Mobile nav toggle
-if (navIcon) {
-  navIcon.addEventListener("click", function () {
-    mobileList.classList.toggle("show");
-  });
-}
