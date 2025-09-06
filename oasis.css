@@ -810,4 +810,34 @@ body.lb-disable-scrolling {
   height: 100%;
 }
 
+/* Center the Lightbox block in the viewport */
+#lightbox {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: auto !important;
+  /* let it shrink to content (image) */
+  text-align: center;
+  /* Lightbox uses this for inline centering */
+}
+
+/* Keep container + data area sized to the image, centered */
+#lightbox .lb-outerContainer {
+  margin: 0 auto !important;
+}
+
+#lightbox .lb-dataContainer {
+  width: auto !important;
+  /* prevents full-viewport width */
+  margin: 6px auto 0 !important;
+  /* centers the close button underneath */
+}
+
+/* (You already hid these; included for completeness) */
+.lb-data .lb-caption,
+.lb-data .lb-number {
+  display: none !important;
+}
+
 /*# sourceMappingURL=oasis.css.map */

@@ -35,11 +35,14 @@
     lightbox.option({
       disableScrolling: true,
       showImageNumberLabel: false,
-      resizeDuration: 200,    // default is 700ms — lower = faster
-      fadeDuration: 200       // default is 500ms — controls overlay/image fade
+      fadeDuration: 200,
+      resizeDuration: 200,
+      // optional: positionFromTop controls Lightbox’s own top offset; we neutralize it with CSS anyway
+      positionFromTop: 0
     });
   }
 </script>
+
 
 <!-- Site JS -->
 <!-- <script type="text/javascript" src="stats.js"></script> -->
