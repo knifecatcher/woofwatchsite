@@ -639,4 +639,9 @@ body.lb-disable-scrolling {
   display: none !important;
 }
 
+#section-about .section__title {
+  margin-bottom: 1rem;
+  /* tighter than the default 3rem */
+}
+
 /*# sourceMappingURL=oasis.css.map */
