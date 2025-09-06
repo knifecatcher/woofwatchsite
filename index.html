@@ -41,6 +41,17 @@ section-features:
     - img: "images/customer-1.png"
       text: "Explore handcrafted, ever-changing levels"
 
+section-media:
+  title: Media
+  trailer: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+  screenshots:
+    - "images/customer-1.png"
+    - "images/customer-1.png"
+    - "images/customer-1.png"
+    - "images/customer-1.png"
+    - "images/customer-1.png"
+    - "images/customer-1.png"
+
 section-stats:
   title: Stats on Oasis
   description: These long path length considerations are exacerbated when communicating with space probes and other long-range targets beyond Earth's atmosphere.
@@ -101,36 +112,41 @@ section-stats:
 <section id="section-features" class="section--features scroll-to-reveal js-section">
   <div class="section__title">
     <h3 class="font-fjalla">{{ page.section-features.title }}</h3>
-    <p>{{ page.section-features.description }}</p>
   </div>
 
   <div class="features__grid">
     {% for feature in page.section-features.items %}
     <div class="feature__card">
-      <img src="{{ feature.img }}" alt="">
+      <a href="{{ feature.img }}" data-lightbox="features" data-title="{{ feature.text }}">
+        <img src="{{ feature.img }}" alt="{{ feature.text }}">
+      </a>
       <p>{{ feature.text }}</p>
     </div>
     {% endfor %}
   </div>
 </section>
 
-<section class="section--stats scroll-to-reveal js-section">
+<section id="section-media" class="section--media scroll-to-reveal js-section">
   <div class="section__title">
-    <h3 class="font-fjalla">{{ page.section-stats.title }}</h3>
-    <p>{{ page.section-stats.description }}</p>
+    <h3 class="font-fjalla">{{ page.section-media.title }}</h3>
   </div>
-  {% for stats in page.section-stats.stats-list %}
-    <div class="stats__block">
-      <div class="flex--horizontal">
-        <h5 class="stats__name">{{ stats.name }}</h5>
-        <h4 class="font-fjalla stats__result">{{ stats.number }}</h4>
-      </div>
-      <div class="stats">
-        <canvas id="{{ stats.id }}" ></canvas>
-      </div>
-    </div>
-  {% endfor %}
+
+  <!-- Trailer -->
+  <div class="media__trailer">
+    <iframe width="100%" height="500" src="{{ page.section-media.trailer }}" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- Screenshots -->
+  <div class="media__screenshots">
+    {% for shot in page.section-media.screenshots %}
+    <a href="{{ shot }}" data-lightbox="media" data-title="Screenshot">
+      <img src="{{ shot }}" class="media__shot" alt="screenshot">
+    </a>
+    {% endfor %}
+  </div>
 </section>
+
+
 <section class="section--integrations js-section">
   <div class="section__title">
     <h3 class="font-fjalla">{{ page.section-integrations.title }}</h3>

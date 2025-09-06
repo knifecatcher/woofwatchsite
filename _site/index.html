@@ -1,41 +1,26 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- HTML Meta Tags -->
   <title></title>
   <meta name="description" content="">
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="">
-  <meta itemprop="description" content="">
-  <meta itemprop="image" content="">
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="">
-  <meta property="og:description" content="">
-  <meta property="og:image" content="">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Site CSS -->
   <link rel="stylesheet" href="http://localhost:4000/oasis.css">
-  <link rel="author" href="humans.txt">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
   <nav class="nav--desktop">
   
     <a href="http://localhost:4000#section-hero" class="js-btn" data-hover="home">home</a>
@@ -85,111 +70,96 @@
 <section id="section-features" class="section--features scroll-to-reveal js-section">
   <div class="section__title">
     <h3 class="font-fjalla">Features</h3>
-    <p></p>
   </div>
 
   <div class="features__grid">
     
     <div class="feature__card">
-      <img src="images/customer-1.png" alt="">
+      <a href="images/customer-1.png" data-lightbox="features" data-title="Play seamless four-player co-op">
+        <img src="images/customer-1.png" alt="Play seamless four-player co-op">
+      </a>
       <p>Play seamless four-player co-op</p>
     </div>
     
     <div class="feature__card">
-      <img src="images/customer-1.png" alt="">
+      <a href="images/customer-1.png" data-lightbox="features" data-title="Unlock over 100 items to keep each run fresh">
+        <img src="images/customer-1.png" alt="Unlock over 100 items to keep each run fresh">
+      </a>
       <p>Unlock over 100 items to keep each run fresh</p>
     </div>
     
     <div class="feature__card">
-      <img src="images/customer-1.png" alt="">
+      <a href="images/customer-1.png" data-lightbox="features" data-title="Theorycraft endless mech and weapon combos">
+        <img src="images/customer-1.png" alt="Theorycraft endless mech and weapon combos">
+      </a>
       <p>Theorycraft endless mech and weapon combos</p>
     </div>
     
     <div class="feature__card">
-      <img src="images/customer-1.png" alt="">
+      <a href="images/customer-1.png" data-lightbox="features" data-title="Discover lore through memory cores">
+        <img src="images/customer-1.png" alt="Discover lore through memory cores">
+      </a>
       <p>Discover lore through memory cores</p>
     </div>
     
     <div class="feature__card">
-      <img src="images/customer-1.png" alt="">
+      <a href="images/customer-1.png" data-lightbox="features" data-title="Challenge bosses inspired by dogs' greatest fears">
+        <img src="images/customer-1.png" alt="Challenge bosses inspired by dogs' greatest fears">
+      </a>
       <p>Challenge bosses inspired by dogs' greatest fears</p>
     </div>
     
     <div class="feature__card">
-      <img src="images/customer-1.png" alt="">
+      <a href="images/customer-1.png" data-lightbox="features" data-title="Explore handcrafted, ever-changing levels">
+        <img src="images/customer-1.png" alt="Explore handcrafted, ever-changing levels">
+      </a>
       <p>Explore handcrafted, ever-changing levels</p>
     </div>
     
   </div>
 </section>
 
-<section class="section--stats scroll-to-reveal js-section">
+<section id="section-media" class="section--media scroll-to-reveal js-section">
   <div class="section__title">
-    <h3 class="font-fjalla">Stats on Oasis</h3>
-    <p>These long path length considerations are exacerbated when communicating with space probes and other long-range targets beyond Earth's atmosphere.</p>
+    <h3 class="font-fjalla">Media</h3>
   </div>
-  
-    <div class="stats__block">
-      <div class="flex--horizontal">
-        <h5 class="stats__name">A/B Split</h5>
-        <h4 class="font-fjalla stats__result">A/B</h4>
-      </div>
-      <div class="stats">
-        <canvas id="stats-0" ></canvas>
-      </div>
-    </div>
-  
-    <div class="stats__block">
-      <div class="flex--horizontal">
-        <h5 class="stats__name">Crash Rate</h5>
-        <h4 class="font-fjalla stats__result">89%</h4>
-      </div>
-      <div class="stats">
-        <canvas id="stats-1" ></canvas>
-      </div>
-    </div>
-  
-    <div class="stats__block">
-      <div class="flex--horizontal">
-        <h5 class="stats__name">Error reporting API - Uptime</h5>
-        <h4 class="font-fjalla stats__result">100</h4>
-      </div>
-      <div class="stats">
-        <canvas id="stats-2" ></canvas>
-      </div>
-    </div>
-  
-    <div class="stats__block">
-      <div class="flex--horizontal">
-        <h5 class="stats__name">General API</h5>
-        <h4 class="font-fjalla stats__result">81rps</h4>
-      </div>
-      <div class="stats">
-        <canvas id="stats-3" ></canvas>
-      </div>
-    </div>
-  
-    <div class="stats__block">
-      <div class="flex--horizontal">
-        <h5 class="stats__name">Data Access API</h5>
-        <h4 class="font-fjalla stats__result">93%</h4>
-      </div>
-      <div class="stats">
-        <canvas id="stats-4" ></canvas>
-      </div>
-    </div>
-  
-    <div class="stats__block">
-      <div class="flex--horizontal">
-        <h5 class="stats__name">Average Latency</h5>
-        <h4 class="font-fjalla stats__result">1.98ms</h4>
-      </div>
-      <div class="stats">
-        <canvas id="stats-5" ></canvas>
-      </div>
-    </div>
-  
+
+  <!-- Trailer -->
+  <div class="media__trailer">
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- Screenshots -->
+  <div class="media__screenshots">
+    
+    <a href="images/customer-1.png" data-lightbox="media" data-title="Screenshot">
+      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
+    </a>
+    
+    <a href="images/customer-1.png" data-lightbox="media" data-title="Screenshot">
+      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
+    </a>
+    
+    <a href="images/customer-1.png" data-lightbox="media" data-title="Screenshot">
+      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
+    </a>
+    
+    <a href="images/customer-1.png" data-lightbox="media" data-title="Screenshot">
+      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
+    </a>
+    
+    <a href="images/customer-1.png" data-lightbox="media" data-title="Screenshot">
+      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
+    </a>
+    
+    <a href="images/customer-1.png" data-lightbox="media" data-title="Screenshot">
+      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
+    </a>
+    
+  </div>
 </section>
+
+
 <section class="section--integrations js-section">
   <div class="section__title">
     <h3 class="font-fjalla"></h3>
@@ -199,7 +169,27 @@
   </div>
 </section>
 
-    <script type="text/javascript" src="stats.js"></script>
-    <script src="./oasis.js"></script>
-  </body>
+
+<!-- Vendor JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.js"></script>
+
+<!-- Lightbox init -->
+<script>
+  if (window.lightbox && lightbox.option) {
+    lightbox.option({
+      disableScrolling: true,       // no background scroll
+      showImageNumberLabel: false   // hides "Image 1 of X"
+    });
+  }
+</script>
+
+<!-- Site JS -->
+<!-- <script type="text/javascript" src="stats.js"></script> -->
+<script src="./oasis.js"></script>
+
+</body>
+
 </html>

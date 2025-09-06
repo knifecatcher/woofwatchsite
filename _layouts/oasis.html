@@ -1,43 +1,48 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- HTML Meta Tags -->
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ page.description }}">
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="{{ page.title }}">
-  <meta itemprop="description" content="{{ page.description }}">
-  <meta itemprop="image" content="{{ page.social-image }}">
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="{{ page.url }}">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:description" content="{{ page.description }}">
-  <meta property="og:image" content="{{ page.social-image }}">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ page.description }}">
-  <meta name="twitter:image" content="{{ page.social-image }}">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Site CSS -->
   <link rel="stylesheet" href="{{ site.url }}/{{ page.css }}.css">
-  <link rel="author" href="humans.txt">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
   {{content}}
-    <script type="text/javascript" src="stats.js"></script>
-    <script src="./oasis.js"></script>
-  </body>
+
+<!-- Vendor JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.js"></script>
+
+<!-- Lightbox init -->
+<script>
+  if (window.lightbox && lightbox.option) {
+    lightbox.option({
+      disableScrolling: true,       // no background scroll
+      showImageNumberLabel: false   // hides "Image 1 of X"
+    });
+  }
+</script>
+
+<!-- Site JS -->
+<!-- <script type="text/javascript" src="stats.js"></script> -->
+<script src="./oasis.js"></script>
+
+</body>
+
 </html>

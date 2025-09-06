@@ -769,4 +769,45 @@ section {
   margin-bottom: 1rem;
 }
 
+.section--media {
+  max-width: 960px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.media__trailer {
+  margin-bottom: 3rem;
+}
+
+.media__screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.media__shot img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Hide the Lightbox caption */
+.lb-data .lb-caption {
+  display: none !important;
+}
+
+/* Hide the Lightbox counter ("Image 1 of X") */
+.lb-data .lb-number {
+  display: none !important;
+}
+
+/* Lock page scroll when Lightbox is open */
+html.lb-disable-scrolling,
+body.lb-disable-scrolling {
+  overflow: hidden !important;
+  height: 100%;
+}
+
 /*# sourceMappingURL=oasis.css.map */
