@@ -33,8 +33,10 @@
 <script>
   if (window.lightbox && lightbox.option) {
     lightbox.option({
-      disableScrolling: true,       // no background scroll
-      showImageNumberLabel: false   // hides "Image 1 of X"
+      disableScrolling: true,
+      showImageNumberLabel: false,
+      resizeDuration: 200,    // default is 700ms — lower = faster
+      fadeDuration: 200       // default is 500ms — controls overlay/image fade
     });
   }
 </script>
