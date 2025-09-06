@@ -84,20 +84,20 @@ section-media:
 
 <section id="section-about" class="section--about scroll-to-reveal js-section">
   <div class="section__title">
-    <h2 class="font-fjalla">{{ page.section-about.title }}</h2>
+    <h2>{{ page.section-about.title }}</h2>
     <p>{{ page.section-about.body }}</p>
   </div>
 </section>
 
 <section id="section-features" class="section--features scroll-to-reveal js-section">
   <div class="section__title">
-    <h3 class="font-fjalla">{{ page.section-features.title }}</h3>
+    <h3>{{ page.section-features.title }}</h3>
   </div>
 
   <div class="features__grid">
     {% for feature in page.section-features.items %}
     <div class="feature__card">
-      <a href="{{ feature.img }}" data-lightbox="features" data-title="{{ feature.text }}">
+      <a href="{{ feature.img }}" data-lightbox="features">
         <img src="{{ feature.img }}" alt="{{ feature.text }}">
       </a>
       <p>{{ feature.text }}</p>
@@ -108,7 +108,7 @@ section-media:
 
 <section id="section-media" class="section--media scroll-to-reveal js-section">
   <div class="section__title">
-    <h3 class="font-fjalla">{{ page.section-media.title }}</h3>
+    <h3>{{ page.section-media.title }}</h3>
   </div>
 
   <!-- Trailer -->
@@ -119,9 +119,10 @@ section-media:
   <!-- Screenshots -->
   <div class="media__screenshots">
     {% for shot in page.section-media.screenshots %}
-    <a href="{{ shot }}" data-lightbox="media" data-title="Screenshot">
+    <a href="{{ shot }}" data-lightbox="media">
       <img src="{{ shot }}" class="media__shot" alt="screenshot">
     </a>
     {% endfor %}
   </div>
 </section>
+

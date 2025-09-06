@@ -26,7 +26,7 @@ sass --watch sass/oasis.scss:oasis.css
 
 ## Credits
 
-* [Google Fonts - Open Sans, Fjalla One](https://fonts.google.com)
+* [Google Fonts - Roboto](https://fonts.google.com)
 * [Font Awesome v4](http://fontawesome.io/)
 * [Waypoint.js](http://imakewebthings.com/waypoints/)
 * [Tiny Slider](https://github.com/ganlanyuan/tiny-slider)
