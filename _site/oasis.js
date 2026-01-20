@@ -1,71 +1,63 @@
-// === Smooth Scroll + Nav Highlight ===
-var ctaBtn = document.querySelector(".cta");
-var mobileList = document.querySelector(".mobile-list");
-var navIcon = document.querySelector(".nav--icon");
-var btns = document.querySelectorAll(".js-btn");
-var mobilebtns = document.querySelectorAll(".js-mobile-btn");
+const nav = document.querySelector(".site-nav");
+const navToggle = document.querySelector(".nav__toggle");
+const scrollLinks = document.querySelectorAll(".js-scroll");
+const revealNodes = document.querySelectorAll(".reveal");
 
-// Tiny slider init (unchanged)
-var slider = tns({
-  container: ".slide__container",
-  arrowKeys: true,
-  controlsText: [
-    '<i class="fas fa-angle-left"></i>',
-    '<i class="fas fa-angle-right"></i>'
-  ],
-  nav: false
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = document.body.classList.toggle("nav-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
+    if (href && href.startsWith("#")) {
+      const target = document.querySelector(href);
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    if (document.body.classList.contains("nav-open")) {
+      document.body.classList.remove("nav-open");
+      if (navToggle) {
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
 });
 
-// Reveal on scroll (unchanged)
-var scrollToRevealArray = document.querySelectorAll(".scroll-to-reveal");
-for (var i = 0; i < scrollToRevealArray.length; i++) {
-  var waypoint = new Waypoint({
-    element: scrollToRevealArray[i],
-    handler: function (direction) {
-      this.element.classList.add("fadeInUp");
-    },
-    offset: Waypoint.viewportHeight()
-  });
-}
+const onScroll = () => {
+  if (!nav) {
+    return;
+  }
+  if (window.scrollY > 10) {
+    nav.classList.add("is-scrolled");
+  } else {
+    nav.classList.remove("is-scrolled");
+  }
+};
 
-// Attach smooth scroll by href
-function attachSmoothScroll(buttons) {
-  buttons.forEach(btn => {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
 
-      const href = this.getAttribute("href");
-      const hash = href && href.includes("#") ? href.split("#")[1] : null;
-
-      if (hash) {
-        const target = document.getElementById(hash);
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
         }
-      }
-
-      // Close mobile menu if open
-      if (mobileList.classList.contains("show")) {
-        mobileList.classList.remove("show");
-      }
-    });
-  });
-}
-
-attachSmoothScroll(btns);
-attachSmoothScroll(mobilebtns);
-
-// Fix nav stickiness on scroll
-if (ctaBtn) {
-  new Waypoint({
-    element: ctaBtn,
-    handler: function (direction) {
-      if (direction === "down") {
-        document.querySelector("nav").classList.add("fixed");
-      } else {
-        document.querySelector("nav").classList.remove("fixed");
-      }
+      });
     },
-    offset: -80
-  });
+    { threshold: 0.2 }
+  );
+
+  revealNodes.forEach((node) => observer.observe(node));
+} else {
+  revealNodes.forEach((node) => node.classList.add("is-visible"));
 }

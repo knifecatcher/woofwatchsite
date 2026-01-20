@@ -8,13 +8,10 @@
   <title>WoofWatch</title>
   <meta name="description" content="Dogs in mech suits guarding the galaxy. Collect gear, battle bosses, and join WoofWatch.">
 
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Site CSS -->
   <link rel="stylesheet" href="http://localhost:4000/oasis.css">
@@ -25,149 +22,123 @@
 </head>
 
 <body>
-  <nav class="nav--desktop">
-  
-    <a href="http://localhost:4000#section-hero" class="js-btn" data-hover="home">home</a>
-  
-    <a href="http://localhost:4000#section-about" class="js-btn" data-hover="about">about</a>
-  
-    <a href="http://localhost:4000#section-features" class="js-btn" data-hover="features">features</a>
-  
-    <a href="http://localhost:4000#section-media" class="js-btn" data-hover="media">media</a>
-  
+  <nav class="site-nav">
+  <div class="nav__inner">
+    <a class="brand js-scroll" href="#section-hero">Home</a>
+    <div class="nav__links">
+      <a class="js-scroll" href="#section-features">Game</a>
+      <a class="js-scroll" href="#section-media">Media</a>
+      <a class="js-scroll" href="#section-cta">Newsletter</a>
+    </div>
+    <div class="nav__actions">
+      <a class="steam-link" href="https://store.steampowered.com/app/3458330/WoofWatch/" target="_blank" rel="noopener">
+        <span>Wishlist now on</span>
+        <img src="images/steam_logo.png" alt="Steam logo">
+      </a>
+    </div>
+    <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="nav__panel">
+    <a class="js-scroll" href="#section-features">Game</a>
+    <a class="js-scroll" href="#section-media">Media</a>
+    <a class="js-scroll" href="#section-cta">Newsletter</a>
+  </div>
 </nav>
-<!-- Fullscreen splash -->
-<section id="section-hero" style="background-image:url('images/cool_dog.jpg');
-                background-size:cover;
-                background-position:center;
-                background-repeat:no-repeat;
-                width:100vw;
-                height:100vh;
-                margin:0;
-                padding:0;">
-</section>
 
-
-<section id="section-about" class="section--about scroll-to-reveal js-section">
-  <div class="section__title">
-    <h2>Join WoofWatch</h2>
-    <p>Dogs have always roamed the stars: a utopian species sniffing out worlds worth saving. When they discovered Earth, they embedded sleeper pups in case danger struck. <br><br> Now, in sun-soaked <b>Pastel City</b>, a rogue AI called <b>S.A.M.</b> has broken free. As the last activated agent of <b>WoofWatch</b>, you’re a rookie pup in a mech suit - ready to guard humanity and prove that hope still has teeth.</p>
+<section id="section-hero" class="hero">
+  <div class="hero__image" role="img" aria-label="WoofWatch hero art"></div>
+  <div class="hero__backdrop"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__wordmark reveal">
+        <img src="images/woofwatch_wordmark.png" alt="WoofWatch">
+      </div>
+      <p class="hero__coming">Coming soon</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid btn--steam" href="https://store.steampowered.com/app/3458330/WoofWatch/" target="_blank" rel="noopener">
+          <span>Wishlist now on</span>
+          <img src="images/steam_logo.png" alt="Steam logo">
+        </a>
+        <a class="btn btn--solid btn--white js-scroll" href="#section-media">Watch the trailer</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="section-features" class="section--features scroll-to-reveal js-section">
-  <div class="section__title">
-    <h2>Features</h2>
-  </div>
-
-  <div class="features__grid">
-    
-    <div class="feature__card">
-      <a href="images/customer-1.png" data-lightbox="features">
-        <img src="images/customer-1.png" alt="Unleash 12 heroic dogs, each packing a signature Super Ability">
-      </a>
-      <p>Unleash 12 heroic dogs, each packing a signature Super Ability</p>
+<section id="section-features" class="section section--features">
+  <div class="container">
+    <div class="section__title">
+      <h2>Game</h2>
     </div>
-    
-    <div class="feature__card">
-      <a href="images/customer-1.png" data-lightbox="features">
-        <img src="images/customer-1.png" alt="Sniff out a diverse cast of enemies, each with unique mechanics to master">
-      </a>
-      <p>Sniff out a diverse cast of enemies, each with unique mechanics to master</p>
+    <div class="game__panel">
+      <img src="images/builtForChaos.jpg" alt="WoofWatch Built for Chaos">
+      <div class="game__copy">
+        <h3>Built for chaos</h3>
+        <div class="game__detail">
+          <p>Weapons and armor come with unique effects that stack in surprising ways, creating thousands of possible outcomes.
+          Choose from a roster of mech-suited dogs, each with their own ability, and experiment to discover powerful (or
+          ridiculous) results.</p>
+        </div>
+      </div>
     </div>
-    
-    <div class="feature__card">
-      <a href="images/customer-1.png" data-lightbox="features">
-        <img src="images/customer-1.png" alt="Fetch gear with unique effects, combining into chaotic synergies">
-      </a>
-      <p>Fetch gear with unique effects, combining into chaotic synergies</p>
+    <div class="game__panel">
+      <img src="images/splitSecondCombat.jpg" alt="WoofWatch Split Second Combat">
+      <div class="game__copy">
+        <h3>Split-second combat</h3>
+        <div class="game__detail">
+          <p>Tight twin-stick combat rewards quick reactions and smart positioning. Chain dodges, gunfire, grenades, melee strikes, and super abilities into seamless fights.</p>
+        </div>
+      </div>
     </div>
-    
-    <div class="feature__card">
-      <a href="images/customer-1.png" data-lightbox="features">
-        <img src="images/customer-1.png" alt="Track down S.A.M.’s Memory Cores to uncover its secrets">
-      </a>
-      <p>Track down S.A.M.’s Memory Cores to uncover its secrets</p>
+    <div class="game__panel">
+      <img src="images/newEveryRun.jpg" alt="WoofWatch New Every Run">
+      <div class="game__copy">
+        <h3>New every run</h3>
+        <div class="game__detail">
+          <p>Five distinct districts of Pastel City, each with its own unique enemies and boss.
+          Layouts and loot change every time you deploy, with new moments to discover even in familiar places.</p>
+        </div>
+      </div>
     </div>
-    
-    <div class="feature__card">
-      <a href="images/customer-1.png" data-lightbox="features">
-        <img src="images/customer-1.png" alt="Confront bosses born from dogs’ greatest fears — vacuums included">
-      </a>
-      <p>Confront bosses born from dogs’ greatest fears — vacuums included</p>
-    </div>
-    
-    <div class="feature__card">
-      <a href="images/customer-1.png" data-lightbox="features">
-        <img src="images/customer-1.png" alt="Roam 5 handcrafted, ever-changing roguelike levels">
-      </a>
-      <p>Roam 5 handcrafted, ever-changing roguelike levels</p>
-    </div>
-    
   </div>
 </section>
 
-<section id="section-media" class="section--media scroll-to-reveal js-section">
-  <div class="section__title">
-    <h2>Media</h2>
-  </div>
-
-  <!-- Trailer -->
-  <div class="media__trailer">
-    <iframe width="100%" height="500" src="https://www.youtube.com/embed/0e3GPea1Tyg" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <!-- Screenshots -->
-  <div class="media__screenshots">
-    
-    <a href="images/customer-1.png" data-lightbox="media">
-      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
-    </a>
-    
-    <a href="images/customer-1.png" data-lightbox="media">
-      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
-    </a>
-    
-    <a href="images/customer-1.png" data-lightbox="media">
-      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
-    </a>
-    
-    <a href="images/customer-1.png" data-lightbox="media">
-      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
-    </a>
-    
-    <a href="images/customer-1.png" data-lightbox="media">
-      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
-    </a>
-    
-    <a href="images/customer-1.png" data-lightbox="media">
-      <img src="images/customer-1.png" class="media__shot" alt="screenshot">
-    </a>
-    
+<section id="section-media" class="section section--media">
+  <div class="container">
+    <div class="section__title">
+      <h2>Media</h2>
+    </div>
+    <div class="media__trailer">
+      <div class="media__frame">
+        <iframe title="WoofWatch trailer" src="https://www.youtube.com/embed/-AgKZEBkDFA?si=4sWXn3al_NXAFleK" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="media__screenshots">
+      <img src="images/woofwatch_dialogue.gif" class="media__shot" alt="WoofWatch screenshot">
+      <img src="images/woofwatch_explodingCrate.gif" class="media__shot" alt="WoofWatch screenshot">
+      <img src="images/woofwatch_lastChance.gif" class="media__shot" alt="WoofWatch screenshot">
+      <img src="images/woofwatch_rapidfireSalvo.gif" class="media__shot" alt="WoofWatch screenshot">
+      <img src="images/woofwatch_sword.gif" class="media__shot" alt="WoofWatch screenshot">
+    </div>
   </div>
 </section>
 
-
-
-<!-- Vendor JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.js"></script>
-
-<!-- Lightbox init -->
-<script>
-  if (window.lightbox && lightbox.option) {
-    lightbox.option({
-      disableScrolling: true,
-      showImageNumberLabel: false,
-      fadeDuration: 200,
-      resizeDuration: 200,
-      // optional: positionFromTop controls Lightbox’s own top offset; we neutralize it with CSS anyway
-      positionFromTop: 0
-    });
-  }
-</script>
+<section id="section-cta" class="section section--cta">
+  <div class="container cta__inner">
+    <div>
+      <div class="cta__links">
+        <a href="mailto:woofwatchgame@gmail.com">Contact Us</a>
+        <a href="https://discord.gg/Z8zm9Nqh93" target="_blank" rel="noopener">Discord</a>
+        <a href="https://x.com/woofwatchgame" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.instagram.com/woofwatchgame/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Site JS -->
