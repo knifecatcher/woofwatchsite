@@ -277,9 +277,10 @@ body.nav-open .nav__panel {
   color: #080b13;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
   background: linear-gradient(120deg, var(--sunset), var(--electric));
-  box-shadow: 0 12px 28px rgba(40, 242, 255, 0.3);
+  background-clip: padding-box;
+  box-shadow: 0 12px 28px rgba(40, 242, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
   transition: color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -293,7 +294,7 @@ body.nav-open .nav__panel {
 .steam-link:hover {
   color: #080b13;
   transform: translateY(-1px);
-  box-shadow: 0 0 26px rgba(40, 242, 255, 0.35);
+  box-shadow: 0 0 26px rgba(40, 242, 255, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.16);
 }
 
 .steam-link:hover img {
@@ -333,7 +334,7 @@ body.nav-open .nav__panel {
   gap: 2.5rem;
   grid-template-columns: 1fr;
   align-items: center;
-  justify-items: start;
+  justify-items: center;
 }
 
 .hero__content {
@@ -343,6 +344,9 @@ body.nav-open .nav__panel {
   max-width: none;
   min-height: 50vh;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(5vh);
 }
 
 .eyebrow {
@@ -384,7 +388,7 @@ body.nav-open .nav__panel {
 
 .hero .container {
   width: min(1400px, 94vw);
-  margin-left: clamp(1.5rem, 6vw, 5rem);
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -654,6 +658,16 @@ body.nav-open .nav__panel {
 @media (max-width: 560px) {
   .hero {
     padding-top: 7rem;
+  }
+
+  .hero .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__content {
+    align-items: center;
+    text-align: center;
   }
 
   .cta__inner {
