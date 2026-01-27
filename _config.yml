@@ -1,11 +1,12 @@
 title: WoofWatch
 
 description: >-
-  Sit! Stay! Save the day!
+  Dogs in mech suits guarding the galaxy. Collect gear, battle bosses, and join WoofWatch.
 baseurl: ""
 url: https://woofwatchgame.com
 twitter_username: jekyllrb
 github_username:  jekyll
+social-image: images/social-card.jpg
 
 # Build settings
 markdown: kramdown
