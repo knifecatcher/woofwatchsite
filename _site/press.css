@@ -214,6 +214,17 @@ p {
   height: auto;
   object-fit: cover; }
 
+.media__frame {
+  width: 100%; }
+
+.media__frame iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: 12px; }
+
 .logo-preview {
   width: min(100%, 460px);
   max-width: 460px; }
